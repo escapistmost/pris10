@@ -33,3 +33,19 @@ AI课程任务10 - 基于 T5_translate 中英俄互相翻译的实现
 - PyTorch 
 - transformers
 - sentencepiece
+
+## 其它问题
+
+这个库会自动下载模型到你运行这个代码的models文件夹中（没有这个文件夹它也会自动创建一个），但是大家可能会遇到没有魔法（翻不了墙，下半天结果网络错误），位置存储不够等问题，下面是对应的解决方法：
+
+下面是这个模型的链接，你需要自己去把这个文件下载下来并解压到对应的地址，然后使用函数的时候增加一个参数（下面是个例子）：
+https://pan.baidu.com/s/1TMbs6OGJC4daS7tqqFlLAw?pwd=ggnm
+
+```
+print(t5trans.trans_en2ch('hello world'), cache_dir='./my_model/')
+```
+上面对应的文件夹相对格式是这样的：
+
+    main.py  ——你运行文件时的相对路径
+    my_model ——文件夹
+        models--utrobinmv--t5_translate_en_ru_zh_small_1024 ——模型文件
